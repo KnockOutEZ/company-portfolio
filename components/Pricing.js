@@ -135,11 +135,10 @@ const Pricing = () => {
         </div>
         <div className="flex flex-col w-full my-16">
           <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed w-9/12 sm:w-6/12 lg:w-4/12 mx-auto">
-            Huge Global Network of Fast VPN{" "}
+          Trusted by Thousands of Happy Customer{" "}
           </h3>
           <p className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12">
-            See LaslesVPN everywhere to make it easier for you when you move
-            locations.
+            We have customers all over the globe!
           </p>
           <div className="py-12 w-full px-8 mt-16">
             <Maps className="w-full h-auto" />
@@ -173,17 +172,16 @@ const Pricing = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col w-full my-16" id="testimoni">
+        <div className="flex flex-col w-full my-16" id="projects">
           <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto">
-            Trusted by Thousands of Happy Customer{" "}
+            Check Some of Our Beautiful Works{" "}
           </h3>
           <p className="leading-normal mx-auto mb-2 mt-4 w-10/12 sm:w-7/12 lg:w-6/12">
-            These are the stories of our customers who have joined us with great
-            pleasure when using this crazy feature.
+            These are the projects that we are hyped to share with you!
           </p>
-          <div className="w-full flex flex-col py-12">
+          {/* <div className="w-full flex flex-col py-12">
             <Testimoni />
-          </div>
+          </div> */}
           <div className="w-full flex flex-col py-12">
             <Projects />
           </div>
@@ -191,11 +189,15 @@ const Pricing = () => {
             <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">
               <div className="flex flex-col text-left w-10/12 sm:w-7/12 lg:w-5/12 mb-6 sm:mb-0">
                 <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
-                  Subscribe Now for <br /> Get Special Features!
+                  Make a career <br /> in our Company!
                 </h5>
-                <p>Let's subscribe with us and find the fun.</p>
+                <p>Lets work together!</p>
               </div>
-              <ButtonPrimary>Get Started</ButtonPrimary>
+              <a href=" https://mail.google.com/mail/?view=cm&fs=1&to=email@domain.com" target="__blank">
+              <ButtonPrimary>
+                Join Us
+              </ButtonPrimary>
+              </a>
             </div>
             <div
               className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-60 sm:h-56 top-0 mt-8 mx-auto left-0 right-0"

@@ -7,7 +7,7 @@ import Stars from "../public/assets/Icon/stars.svg";
 import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 
-const Testimoni = ({
+const Projects = ({
   listTestimoni = [
     {
       name: "iezh Robert",
@@ -16,7 +16,7 @@ const Testimoni = ({
       country: "Poland",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "Web Development",
     },
     {
       name: "iezh Robert",
@@ -25,7 +25,7 @@ const Testimoni = ({
       country: "Poland",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "Web Development",
     },
     {
       name: "iezh Robert",
@@ -34,7 +34,7 @@ const Testimoni = ({
       country: "Poland",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "Web Development",
     },
     {
       name: "iezh Robert",
@@ -43,7 +43,7 @@ const Testimoni = ({
       country: "Poland",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "Web Development",
     },
   ],
 }) => {
@@ -95,13 +95,12 @@ const Testimoni = ({
               <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
               <Image
                     src={"/assets/illustration2.png"}
-                    height={100}
-                    width={100}
-                    className="mx-auto items-center left-0 right-0"
-                    alt="Icon People"
+                    alt="Picture of the author"
+                    width={500}
+                    height={500}
                   />
               </div>
-              <p className="mt-5 text-left">“{listTestimonis.testimoni}”.</p>
+              <p className="mt-5 text-center text-lg font-bold">“{listTestimonis.testimoni}”.</p>
             </div>
           </div>
         ))}
@@ -126,4 +125,4 @@ const Testimoni = ({
   );
 };
 
-export default Testimoni;
+export default Projects;

@@ -25,11 +25,11 @@ const Hero = ({
       <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16 ">
         <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
           <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-            Want anything to be easy with <strong>LaslesVPN</strong>.
+            Want anything to be easy with <strong>Mitho</strong>.
           </h1>
           <p className="text-black-500 mt-4 mb-6">
             Provide a network for all your needs with ease and fun using
-            LaslesVPN discover interesting features from us.
+            Mitho discover interesting features from us.
           </p>
           <ButtonPrimary>Get Started</ButtonPrimary>
         </div>
@@ -68,7 +68,7 @@ const Hero = ({
           ))}
         </div>
         <div
-          className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-64 sm:h-48 top-0 mt-8 mx-auto left-0 right-0"
+          className="absolute bg-black-600 opacity-5 w-11/12 rounded-lg h-64 sm:h-48 top-0 mt-8 mx-auto left-0 right-0"
           style={{ filter: "blur(114px)" }}
         ></div>
       </div>
