@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 import Testimoni from "./Testimoni";
 import Projects from "./Projects";
@@ -8,6 +8,7 @@ import Maps from "../public/assets/HugeGlobal.svg";
 import axios from "axios";
 
 const Contact = () => {
+  const [projects, setProjects] = useState(null);
   const smtpTrigger = async (event) => {
     event.preventDefault();
 
@@ -21,13 +22,21 @@ const Contact = () => {
       "Port": "587",
     };
 
-    //  {"EmailTo": "ktowhid20@gmail.com", "EmailFrom": "ktowhid20@gmail.com", "EmailSub":"test2","EmailBody":"asdasdasdasdasd/asdqweasqweasd'asd+++++'_+qwe=asdqwe@!#$@#$@!!##@!##@qwe","AppPassword":"qxioakzhcspnfcvs","Host":"smtp.gmail.com","Port":"587"}
       axios.post('https://go-smtp-client.herokuapp.com/sendmail',result,{headers: {"Access-Control-Allow-Origin": "*"}}).then(function (response) {
         console.log(response);
       }).catch(function (error) {
         console.log(error);
       });
   };
+
+  useEffect(() => {
+    axios.get(`https://genesisrestapi.herokuapp.com/3/myprojects`)
+    .then(res => {
+      const projects = res.data;
+      console.log(projects)
+      setProjects(projects)
+    })
+   },[]);
 
   return (
     <div
@@ -45,7 +54,9 @@ const Contact = () => {
             <Testimoni />
           </div> */}
           <div className="w-full flex flex-col py-12">
-            <Projects />
+            {
+              projects ? <Projects listTestimoni={projects}/> : <div></div>
+            }
           </div>
         </div>
         <div className="flex flex-col w-full" id="contact">

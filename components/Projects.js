@@ -1,51 +1,15 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 // import react slick
 import Slider from "react-slick";
 import Image from "next/image";
+import axios from "axios";
 import Stars from "../public/assets/Icon/stars.svg";
 import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 
 const Projects = ({
-  listTestimoni = [
-    {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Web Development",
-    },
-    {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Web Development",
-    },
-    {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Web Development",
-    },
-    {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Web Development",
-    },
-  ],
+  listTestimoni
 }) => {
   const settings = {
     dots: true,
@@ -89,18 +53,23 @@ const Projects = ({
         ref={setSliderRef}
         className="flex items-stretch justify-items-stretch"
       >
-        {listTestimoni.map((listTestimonis, index) => (
+        {listTestimoni.map((project, index) => (
           <div className="px-3 flex items-stretch" key={index}>
             <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col w-full">
+            <a href={project.project_links} target="__blank">
               <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
               <Image
-                    src={"/assets/illustration2.png"}
+                    src={project.project_imgs}
                     alt="Picture of the author"
                     width={500}
                     height={500}
                   />
               </div>
-              <p className="mt-5 text-center text-lg font-bold">“{listTestimonis.testimoni}”.</p>
+              <p className="mt-5 text-left text-lg font-bold">Name: “{project.project_name}”</p>
+              <p className="mt-2 text-left text-md font-semibold">Title: {project.project_title}.</p>
+              <p className="mt-2 text-left text-md font-semibold">Skill Area: {project.project_skill_area}</p>
+              <p className="mt-2 text-left text-md font-semibold">Project Description: {project.project_description}</p>
+          </a>
             </div>
           </div>
         ))}
