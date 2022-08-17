@@ -2,7 +2,6 @@ import React, { useState,useEffect } from "react";
 
 // import react slick
 import Slider from "react-slick";
-import Image from "next/image";
 import axios from "axios";
 import Stars from "../public/assets/Icon/stars.svg";
 import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
@@ -58,11 +57,10 @@ const Projects = ({
             <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col w-full">
             <a href={project.project_links} target="__blank">
               <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
-              <Image
+              <img
                     src={project.project_imgs}
                     alt="Picture of the author"
-                    width={500}
-                    height={500}
+                    className="mx-auto h-48 w-full"
                   />
               </div>
               <p className="mt-5 text-left text-lg font-bold">Name: “{project.project_name}”</p>

@@ -4,14 +4,23 @@ import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
 import ButtonOutline from "../misc/ButtonOutline.";
 import LogoVPN from "../../public/assets/Logo.svg";
+import axios from "axios";
+// import Image from "next/image";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState(null);
   const [scrollActive, setScrollActive] = useState(false);
+  const [logo, setlogo] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollActive(window.scrollY > 20);
     });
+      axios.get(`https://genesisrestapi.herokuapp.com/users/3`)
+      .then(res => {
+        const user = res.data;
+        console.log(user.profile_img)
+        setlogo(user.profile_img)
+      })
   }, []);
   return (
     <>
@@ -24,7 +33,7 @@ const Header = () => {
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
             {/* <LogoVPN className="h-8 w-auto" /> */}
-            Mitho
+            <img src={logo} className="h-14 w-auto"/>
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
             <LinkScroll
